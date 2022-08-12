@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sequences on grids</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="app_container">
+            <form>
+                <div class="label_and_field">
+                    <label for="size">Grid size</label>
+                    <input name="size" id="size" type="number" min="1" max="50" required/>
+                </div>
+                <div class="label_and_field">
+                    <label for="grid_type">Grid type</label>
+                    <select name="grid_type" id="grid_type" required>
+                        <option value="rows">Rows</option>
+                        <option value="rows_alternate">Rows Alternate</option>
+                        <option value="spiral">Spiral</option>
+                    </select>
+                </div>
+                <div class="label_and_field">
+                    <label for="sequence_type">Sequence type</label>
+                    <select name="sequence_type" id="sequence_type" required>
+                        <option value="primes">Primes</option>
+                        <option value="squares">Squares</option>
+                        <option value="fibonacci">Fibonacci</option>
+                    </select>
+                </div>
+                <div class="submit_container">
+                    <input type="submit" value="Draw" />
+                </div>
+            </form>
+            <canvas width="300" height="300"></canvas>
+        </div>
+    </body>
+</html>
