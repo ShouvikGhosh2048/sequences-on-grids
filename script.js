@@ -2,6 +2,18 @@ document.addEventListener('DOMContentLoaded', () => {
     let canvas = document.getElementsByTagName('canvas')[0];
     let ctx = canvas.getContext('2d');
 
+    // https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas#scaling_for_high_resolution_displays
+    const dpr = window.devicePixelRatio;
+    const rect = canvas.getBoundingClientRect();
+
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+
+    ctx.scale(dpr, dpr);
+
+    canvas.style.width = `${rect.width}px`;
+    canvas.style.height = `${rect.height}px`;
+    
     let form = document.getElementsByTagName('form')[0];
     form.addEventListener('submit', (e) => {
         e.preventDefault();
