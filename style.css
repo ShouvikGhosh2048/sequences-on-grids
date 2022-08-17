@@ -48,3 +48,16 @@ input[type="submit"] {
     font-size: 0.9em;
     cursor: pointer;
 }
+
+table {
+    border-spacing: 15px 5px;
+}
+
+th {
+    text-align: left;
+}
+
+.grid_example {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
